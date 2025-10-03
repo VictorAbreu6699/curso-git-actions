@@ -3,7 +3,9 @@ run-name: Runnig - ${{ github.event_name }}
 on: 
   push:
     branches: 
+      - main
       - develop
+      - release/**
 
 jobs:
   on-push:
@@ -11,4 +13,4 @@ jobs:
     steps:
       - name: Comentário
         run: | 
-          echo "Executou somente para a deveop"
+          echo "Executou somente para a develop"
