@@ -1,13 +1,11 @@
-name: GitHub Actions - On Pull Request Types
+name: GitHub Actions - On Push Main file
 run-name: Runnig - ${{ github.event_name }}
 on: 
-  pull_request:
-    types:
-      - closed
+  push:
     branches:
-      - master
+      - main
     paths:
-      - 'teste.py'
+      "main.py"
 
 jobs:
   on-push:
