@@ -1,0 +1,14 @@
+name: GitHub Actions - Push On Path
+run-name: Runnig - ${{ github.event_name }}
+on: 
+  push:
+    paths:
+      - "main.py"
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: | 
+          echo "path on push"
