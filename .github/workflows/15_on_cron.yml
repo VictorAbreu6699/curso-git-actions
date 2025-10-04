@@ -1,0 +1,13 @@
+name: GitHub Actions - On workflow dispatch all types
+run-name: Runnig - ${{ github.event_name }}
+on: 
+  schedule:
+    - cron: 30 17 4 10 *
+    - cron: 0 17 4 10 *
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: | 
+          echo "Job rodou :)"
