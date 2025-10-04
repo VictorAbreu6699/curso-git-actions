@@ -1,0 +1,11 @@
+name: GitHub Actions - On workflow dispatch
+run-name: Runnig - ${{ github.event_name }}
+on: [workflow_dispatch]
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: | 
+          echo "On workflow dispatch"
