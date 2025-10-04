@@ -1,4 +1,4 @@
-name: GitHub Actions - On workflow dispatch all types
+name: GitHub Actions - On cron
 run-name: Runnig - ${{ github.event_name }}
 on: 
   schedule:
