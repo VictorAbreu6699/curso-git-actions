@@ -1,0 +1,38 @@
+name: GitHub Actions - On workflow dispatch all types
+run-name: Runnig - ${{ github.event_name }}
+on: 
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 
+          Selecione a tag
+        type:
+          choice
+        options:
+          - tag_1
+          - tag_2
+          - tag_3
+        default:
+          tag_1
+        required:
+          true
+      name:
+        description: 
+          Digite o Nome
+        type:
+          string
+      is_critical:
+        description: 
+          A operação é critica?
+        type:
+          boolean
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: | 
+          echo "Nome: ${{inputs.name}}"
+          echo "É critico: ${{inputs.is_critical}}"
+          echo "tag: ${{inputs.tags}}"
