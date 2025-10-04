@@ -1,0 +1,18 @@
+name: GitHub Actions - On workflow dispatch bool
+run-name: Runnig - ${{ github.event_name }}
+on: 
+  workflow_dispatch:
+    inputs:
+      is_critical:
+        description: 
+          A operação é critica?
+        type:
+          boolean
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: | 
+          echo "On workflow dispatch ${{inputs.is_critical}}"
