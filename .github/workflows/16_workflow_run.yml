@@ -1,0 +1,13 @@
+name: GitHub Actions - Workflow Run basic
+run-name: Runnig - ${{ github.event_name }}
+on: 
+  workflow_run:
+    workflows:
+      [GitHub Actions - Workflow Run]  
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentário
+        run: | 
+          echo "Job rodou :)"
