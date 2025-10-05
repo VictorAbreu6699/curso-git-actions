@@ -5,7 +5,7 @@ on:
     workflows:
       [GitHub Actions - Workflow Run, GitHub Actions - Workflow Run 2]  
     branches: 
-      [develop]
+      [main]
 jobs:
   on-push:
     runs-on: ubuntu-latest
