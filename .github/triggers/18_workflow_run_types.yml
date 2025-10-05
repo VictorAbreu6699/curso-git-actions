@@ -4,8 +4,8 @@ on:
   workflow_run:
     workflows:
       [GitHub Actions - Workflow Run]  
-    branches: 
-      [develop]
+    types:
+      [completed, requested, in_progress]
 jobs:
   on-push:
     runs-on: ubuntu-latest
